@@ -13,7 +13,13 @@ document.querySelector('button').addEventListener('click', function()
  mostraNumeri(listaNumeri);
  setTimeout(function(){
   reset();
+  
+ for (let i = 0; i <5; i++) {
+  let messaggio=prompt('inserisce un numero')
+  
+ }
  },5000);
+
   
 
 })
