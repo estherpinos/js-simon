@@ -4,6 +4,8 @@ let play = document.getElementById('btn');
 // 1.Creo array vuoto dove mettere i numeri random.
 
 let numeriTotali=5;
+let numeriIndovinati=[];
+
 
 // 2.Cuando faccio click sul bottone:
 document.querySelector('button').addEventListener('click', function()
@@ -12,12 +14,30 @@ document.querySelector('button').addEventListener('click', function()
  let listaNumeri= generaNumeri();
  mostraNumeri(listaNumeri);
  setTimeout(function(){
-  reset();
+ reset();
+
+ setTimeout(function(){
+  let cont=0;
+  for (let i = 0; i <numeriTotali; i++) {
+  let messaggio= parseInt(prompt('inserisci un numero'));
+ 
+  if (listaNumeri.includes(messaggio)) {
+    numeriIndovinati.push(messaggio);
+
+  }
   
- for (let i = 0; i <5; i++) {
-  let messaggio=prompt('inserisce un numero')
   
  }
+ console.log(numeriIndovinati);
+
+ document.getElementById('numeri').innerHTML=`<h1> i numeri indovinati sono ${numeriIndovinati.length} </h1>`
+ console.log(numeriIndovinati);
+ },500);
+
+
+  
+
+
  },5000);
 
   
