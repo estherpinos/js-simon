@@ -30,7 +30,15 @@ document.querySelector('button').addEventListener('click', function()
  }
  console.log(numeriIndovinati);
 
- document.getElementById('numeri').innerHTML=`<h1> i numeri indovinati sono ${numeriIndovinati.length} </h1>`
+ document.getElementById('numeri').innerHTML=`<h1> i numeri indovinati sono ${numeriIndovinati.length} :
+ </h1>`;
+
+ for (let h = 0; h < numeriIndovinati.length; h++) {
+  document.getElementById('numeri').innerHTML+=`<h1>${numeriIndovinati[h]} </h1>`;
+  
+ }
+
+
  console.log(numeriIndovinati);
  },500);
 
